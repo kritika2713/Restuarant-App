@@ -3,7 +3,6 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import axios from "axios";
 import toast  from "react-hot-toast";
 import { useState } from "react";
-
 import { useNavigate } from "react-router-dom";
 
 const Reservation = () => {
@@ -18,7 +17,7 @@ const Reservation = () => {
   const handleReservation = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:4000/api/v1/reservation/send",
+      const { data } = await axios.post("https://restaurant-app-backend-2.onrender.com",
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
